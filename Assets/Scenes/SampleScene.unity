@@ -119,6 +119,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &380185949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 380185951}
+  - component: {fileID: 380185950}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &380185950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380185949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43bcd296cbdb1b27cb00c7809ca294d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  arrayOfObstacles:
+  - {fileID: 6421734940271287613, guid: 223f54a7a017d3c6681efe6d79338dfb, type: 3}
+  - {fileID: 5011014466683010461, guid: c6ee02665f038da88b1ddd962ca0e35f, type: 3}
+  - {fileID: 1513930898860757595, guid: 1becd152d909d9d25987ba6a4f582c4d, type: 3}
+  - {fileID: 2464781428516341166, guid: b520360d491e1d4f3a17c1bdc074ece2, type: 3}
+  - {fileID: 1884813552583170070, guid: 475a1faeb355b253791b7dff083def13, type: 3}
+--- !u!4 &380185951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380185949}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.5, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +510,7 @@ GameObject:
   - component: {fileID: 731391303}
   - component: {fileID: 731391302}
   - component: {fileID: 731391304}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: ZeminYuzey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +754,7 @@ Transform:
   m_GameObject: {fileID: 1041059635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.864, y: 0.832, z: 0}
+  m_LocalPosition: {x: -5.86, y: 0.803, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -723,7 +773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dino
   dinozor: {fileID: 1041059637}
-  jumpForce: 6
+  jumpForce: 8
 --- !u!61 &1041059642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -779,3 +829,4 @@ SceneRoots:
   - {fileID: 1041059639}
   - {fileID: 731391303}
   - {fileID: 565096693}
+  - {fileID: 380185951}

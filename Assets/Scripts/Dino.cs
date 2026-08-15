@@ -4,7 +4,7 @@ using System;
 public class Dino : MonoBehaviour
 {
     public Rigidbody2D dinozor;
-    public float jumpForce = 8f; // zıplama gücü
+    private float jumpForce = 20f; // zıplama gücü
     private float originY;
 
     private void Start() {
