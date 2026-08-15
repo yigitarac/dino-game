@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class GroundScroll : MonoBehaviour
 {
-    int limitX = -12;
+    float limitX;
+    float width;
     float speed = 10f;
     float defaultX;
 
     private void Start()
     {
+        width = GetComponent<SpriteRenderer>().bounds.size.x;
         defaultX = transform.position.x;
+        limitX = defaultX - width;
     }
     private void Update()
     {
