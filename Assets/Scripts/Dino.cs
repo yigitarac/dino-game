@@ -1,26 +1,29 @@
 using UnityEngine;
+using System;
 
 public class Dino : MonoBehaviour
 {
-
     public Rigidbody2D dinozor;
-    public float jumpForce = 3.5f;
+    public float jumpForce = 6f;
+    private float originY;
 
-    void Start()
-    {
-
+    private void Start() {
+        originY = dinozor.linearVelocity.y;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
+        float odds = MathF.Abs(dinozor.linearVelocity.y - originY);
+        if (odds < 0.5f) {
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                Jump();
+            } else if (Input.GetKeyDown(KeyCode.UpArrow)) {
+                Jump();
+            }
         }
     }
 
-    void Jump () {
+    private void Jump () {
         dinozor.linearVelocity = new Vector2(dinozor.linearVelocity.x, jumpForce);
     }
-
 }
