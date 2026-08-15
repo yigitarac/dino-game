@@ -16,10 +16,10 @@ public class GroundScroll : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
-        if (transform.position.x < limitX) {
+        if (transform.position.x < limitX)
+        {
             float overshoot = transform.position.x - limitX;
-            transform.position = new Vector2 (defaultX + overshoot, transform.position.y);
+            transform.position = new Vector2(defaultX + overshoot, transform.position.y);
         }
     }
-
 }
