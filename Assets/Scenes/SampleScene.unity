@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 1041059638}
   - component: {fileID: 1041059641}
   - component: {fileID: 1041059637}
-  - component: {fileID: 1041059640}
+  - component: {fileID: 1041059642}
   m_Layer: 0
   m_Name: Dino
   m_TagString: Untagged
@@ -710,8 +710,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1041059640
-PolygonCollider2D:
+--- !u!114 &1041059641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041059635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0acf9ba7c5c139aad0b738c1535aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dino
+  dinozor: {fileID: 1041059637}
+  jumpForce: 6
+--- !u!61 &1041059642
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -754,28 +768,8 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -1, y: 0.96875}
-      - {x: -1, y: -0.40625}
-      - {x: -0.75, y: -0.96875}
-      - {x: 0.25, y: -0.96875}
-      - {x: 1, y: 0.09375}
-      - {x: 1, y: 0.96875}
-  m_UseDelaunayMesh: 1
---- !u!114 &1041059641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041059635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0acf9ba7c5c139aad0b738c1535aa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Dino
-  dinozor: {fileID: 1041059637}
+  m_Size: {x: 2, y: 1.9375}
+  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
